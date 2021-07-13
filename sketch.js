@@ -35,7 +35,7 @@ function draw(){
 async function getBackgroundImg(){
 
     // write code to fetch time from API
-    var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
+    var response = await fetch("http://worldtimeapi.org/api/timezone/Europe/Berlin")
 
     //change the data in JSON format
     var responseJSON = await response.json();
@@ -44,13 +44,27 @@ async function getBackgroundImg(){
     var hour = datetime.slice(11, 13);
 
     // add conditions to change the background images from sunrise to sunset
-    if (hour >= 04 && hour <= 06){
+    if (hour >= 00 && hour <= 01){
         bg = "sunrise1.png";
-    } else if (hour >= 06 && hour <= 08){
+    } else if (hour >= 06 && hour <= 07){
         bg = "sunrise2.png";
-    } else if (hour >= 023 && hour <= 00){
+    } else if (hour >= 07 && hour <= 08){
+        bg = "sunsrise3.png";
+    } else if (hour >= 08 && hour <= 09){
+        bg = "sunrise4.png";
+    } else if (hour >= 09 && hour <= 10){
+        bg = "sunrise5.png";
+    } else if (hour >= 10 && hour <= 15){
+        bg = "sunrise6.png";
+    } else if (hour >= 15 && hour <= 16){
+        bg = "sunset7.png";
+    } else if (hour >= 16 && hour <= 17){
+        bg = "sunset8.png";
+    } else if (hour >= 17 && hour <= 18){
+        bg = "sunset9.png";
+    } else if (hour >= 18 && hour <= 19){
         bg = "sunset10.png";
-    } else if (hour >= 00 && hour <= 03){
+    } else if (hour >= 19 && hour <= 20){
         bg = "sunset11.png";
     } else{
         bg = "sunset12.png";
